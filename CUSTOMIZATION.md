@@ -27,13 +27,11 @@
 | `{{HR_LEAD}}` | HR 담당자 닉네임 | Jane |
 | `{{HR_LEAD_SLACK_ID}}` | HR 담당자 Slack ID | U01ABCD2EFG |
 | `{{CEO_NAME}}` | 대표 이름/닉네임 | Alex |
-| `{{CPO_NAME}}` | CPO 이름/닉네임 (없으면 제품 책임자) | Chris |
-| `{{CBO_NAME}}` | CBO 이름/닉네임 (없으면 사업 책임자) | Morgan |
+| `{{CTO_NAME}}` | CPO 이름/닉네임 (없으면 제품 책임자) | Chris |
+| `{{CFO_NAME}}` | CBO 이름/닉네임 (없으면 사업 책임자) | Morgan |
 | `{{GITHUB_ORG}}` | GitHub Organization 이름 | abc-corp |
 | `{{HR_SYSTEM}}` | 인사관리 시스템 | Flex, HRIS, Workday 등 |
 | `{{OFFICE_APP}}` | 사무실/공유오피스 앱 | 헤이그라운드, WeWork 등 |
-| `{{PASSWORD_MANAGER}}` | 비밀번호 관리 도구 | 1Password, Bitwarden 등 |
-| `{{LEADERBOARD_URL}}` | 사내 Claude Code 리더보드 URL | https://leaderboard.abc-corp.com |
 
 > **참고**: `{{LEADERBOARD_URL}}`은 사내 리더보드를 운영하지 않는 경우 Step 0의 Phase 4(리더보드)를 제거하면 됩니다.
 
@@ -48,10 +46,10 @@
 | 파일 | 설명 | 작업 내용 |
 |---|---|---|
 | `CLAUDE.md` | 프로젝트 루트 설정 | 플레이스홀더 치환 (자동 sed로 처리 가능) |
-| `config/notion-ids.json` | Notion 페이지 ID 매핑 | 자사 Notion 페이지 ID로 교체 |
+| `config/confluence-ids.json` | Confluence 페이지 ID 매핑 (Atlassian MCP) | 자사 Notion 페이지 ID로 교체 |
 | `config/team-leads.json` | 조직 구조 및 리더 정보 | 자사 팀/셀/리더 정보 입력 |
 
-#### config/notion-ids.json
+#### config/confluence-ids.json
 
 온보딩 각 Step에서 Notion MCP로 콘텐츠를 동적 참조합니다. 자사 Notion에 온보딩 페이지를 만든 뒤, 각 페이지 ID를 입력하세요.
 
@@ -160,20 +158,21 @@
 
 ```bash
 # 자사 정보로 변수 설정
-COMPANY_NAME="에이비씨 주식회사"
-COMPANY_NAME_EN="ABC Corp"
-SERVICE_NAME="MyService"
-COMPANY_DOMAIN="abc-corp.com"
-HR_LEAD="Jane"
-HR_LEAD_SLACK_ID="U01ABCD2EFG"
-CEO_NAME="Alex"
-CPO_NAME="Chris"
-CBO_NAME="Morgan"
-GITHUB_ORG="abc-corp"
-HR_SYSTEM="Flex"
-OFFICE_APP="위워크"
-PASSWORD_MANAGER="1Password"
-LEADERBOARD_URL="https://leaderboard.abc-corp.com"
+COMPANY_NAME="주식회사 피처링"
+COMPANY_NAME_EN="Featuring Corp."
+SERVICE_NAME="피처링(Featuring)"
+COMPANY_DOMAIN="featuring.in"
+HR_LEAD="Thomas"
+HR_LEAD_SLACK_ID="U099RMP705B"
+CEO_NAME="Martin"
+CTO_NAME="Poza"
+CFO_NAME="Elly"
+GITHUB_ORG="TBD"
+HR_SYSTEM="FLEX"
+OFFICE_APP="Workflex"
+CHANNEL_ANNOUNCEMENTS="피처링_공지사항"
+CHANNEL_GENERAL="피처링_근태변경"
+CHANNEL_RANDOM="피처링_연차공유"
 
 # 일괄 치환 실행 (macOS sed 기준)
 find . -type f \( -name "*.md" -o -name "*.json" \) \
@@ -222,7 +221,7 @@ grep -r "{{.*}}" --include="*.md" --include="*.json" . | grep -v ".git/"
 
 자사 조직 구조에 따라 시나리오 파일을 추가하거나 제거할 수 있습니다.
 
-- 기본 제공: `phase2-scenarios-sales.md`, `phase2-scenarios-product.md`, `phase2-scenarios-dev.md`, `phase2-scenarios-cx.md`, `phase2-scenarios-mgmt.md`
+- 기본 제공: `phase2-scenarios-mgmt.md`, `phase2-scenarios-product.md`, `phase2-scenarios-sales.md`, `phase2-scenarios-influencer.md`
 - 추가가 필요한 경우: 같은 형식으로 `phase2-scenarios-{직무}.md` 파일을 만들고, SKILL.md에서 참조 추가
 - 불필요한 직무: 해당 파일을 삭제하고 SKILL.md에서 참조 제거
 
