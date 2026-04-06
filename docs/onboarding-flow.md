@@ -42,7 +42,7 @@ flowchart TD
         S2P0 --> S2P1 --> S2P2
     end
 
-    S2 -->|"☕ {{CPO_NAME}}(CPO)에게 커피챗 DM"| S3
+    S2 -->|"☕ Poza(CTO)에게 커피챗 DM"| S3
 
     %% ── Step 3 ──
     subgraph S3 ["Step 3 — Biz Onboarding"]
@@ -54,7 +54,7 @@ flowchart TD
         S3P0 --> S3P1 --> S3P2 --> S3P3
     end
 
-    S3 -->|"☕ {{CBO_NAME}}(CBO)에게 커피챗 DM"| S4
+    S3 -->|"☕ Elly(CFO)에게 커피챗 DM"| S4
 
     %% ── Step 4 ──
     subgraph S4 ["Step 4 — Build Your First Skill"]
@@ -70,7 +70,7 @@ flowchart TD
     %% ── Step 5 ──
     subgraph S5 ["Step 5 — Wrap Up"]
         direction TB
-        S5P1["Phase 1 · 회고 + VoC<br/>오픈 대화로 온보딩 회고<br/>📨 피드백을 HR({{HR_LEAD}})에게 Slack DM"]
+        S5P1["Phase 1 · 회고 + VoC<br/>오픈 대화로 온보딩 회고<br/>📨 피드백을 HR(Thomas)에게 Slack DM"]
         S5P2["Phase 2 · 킥오프 조언<br/>팀 합류 전 가벼운 조언"]
         S5P1 --> S5P2
     end
@@ -83,7 +83,7 @@ flowchart TD
     %% ── Step 6 안내 (Step 5 직후) ──
     S6_GUIDE["Step 6 간단 안내<br/>Notion 실서비스 참관 가이드 URL 전달<br/>참관 준비 당부"]
 
-    S6_GUIDE --> NOTIFY["🔔 자동 Slack 알림<br/>팀장/셀 리드 + HR({{HR_LEAD}})에게<br/>온보딩 완료 DM 발송"]
+    S6_GUIDE --> NOTIFY["🔔 자동 Slack 알림<br/>팀장/셀 리드 + HR(Thomas)에게<br/>온보딩 완료 DM 발송"]
 
     NOTIFY --> DONE(["✅ 클로드 온보딩 종료"])
 
@@ -145,9 +145,9 @@ flowchart LR
     subgraph TRIGGERS ["자동화 트리거"]
         direction TB
         T1["🏁 온보딩 시작<br/>→ Notion 칸반 카드 + 개밥먹기 문서 자동 생성"]
-        T2["📦 Step 2 완료<br/>→ {{CPO_NAME}}(CPO)에게 커피챗 Slack DM"]
-        T3["📦 Step 3 완료<br/>→ {{CBO_NAME}}(CBO)에게 커피챗 Slack DM"]
-        T4["📨 Step 5 Phase 1<br/>→ VoC 피드백을 HR({{HR_LEAD}})에게 Slack DM"]
+        T2["📦 Step 2 완료<br/>→ Poza(CTO)에게 커피챗 Slack DM"]
+        T3["📦 Step 3 완료<br/>→ Elly(CFO)에게 커피챗 Slack DM"]
+        T4["📨 Step 5 Phase 1<br/>→ VoC 피드백을 HR(Thomas)에게 Slack DM"]
         T5["✅ 온보딩 종료<br/>→ 팀장 + HR에게 완료 Slack DM"]
         T6["📝 매 Step 완료<br/>→ progress.json 업데이트"]
     end
