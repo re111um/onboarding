@@ -6,6 +6,7 @@ Claude Code 기반 **신규입사자 대화형 온보딩 템플릿**. 문서를 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skills-8A63D2)](https://www.claude.com/claude-code)
+[![/cc-onbarding] 기존직원 트랙 포함
 [![Template](https://img.shields.io/badge/GitHub-Use%20this%20template-2ea44f)](https://github.com/Vivi-lee-01/ai-onboarding-template/generate)
 
 📖 **만들게 된 이야기**: [AI Native를 말하면서 AI Naive한 온보딩을 하고 있었다](https://vivi-blog-three.vercel.app/posts/interactive-onboarding)
@@ -63,7 +64,7 @@ claude
 | **Step 3** | Biz | BM, 고객 여정, 시나리오 퀘스트 | - |
 | **Step 4** | Build Your First Skill | 스킬 해부 → 설계 → 구현 → PR | GitHub PR |
 | **Step 5** | Wrap Up | 회고 + 팀 킥오프 조언 | - |
-| **Step 6** | Live Audit | 실서비스 참관 (선택) | - |
+| **Step 6** | Live Audit | 피처링 AI 솔루션 체험 (개발팀 협업 후 활성화) (선택) | - |
 
 전체 흐름도: [`docs/onboarding-flow.md`](docs/onboarding-flow.md)
 
@@ -101,7 +102,7 @@ claude
     step3-biz/                # BM, 고객여정, 시나리오 퀘스트
     step4-skill/              # 나만의 스킬 만들기
     step5-wrapup/             # 회고 + 팀 킥오프 조언
-    step6-live-audit/         # 실서비스 참관 (선택)
+    step6-live-audit/         # 피처링 AI 솔루션 체험 (개발팀 협업 후 활성화) (선택)
 config/
   notion-ids.example.json     # Notion 페이지 ID 매핑 (예시)
   team-leads.example.json     # 팀 리더 정보 (예시)
@@ -118,7 +119,7 @@ CUSTOMIZATION.md              # 자사 정보 커스터마이징 가이드
 
 | 서비스 | 용도 |
 |--------|------|
-| **Notion** | 온보딩 콘텐츠 fetch, 산출물 저장 |
+| Atlassian (Confluence + Jira) | 온보딩 콘텐츠 fetch, 산출물 저장 |
 | **Slack** | 완료 알림, 팀 연결, 인사 메시지 |
 | **Gmail** | 이메일 세팅 확인 |
 | **Google Calendar** | 일정 확인 |
