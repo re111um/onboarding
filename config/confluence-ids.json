@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "base_url": "https://featuring-corp.atlassian.net",
+    "space_key": "FC",
+    "mcp": "Atlassian MCP (Confluence + Jira)",
+    "note": "하위 페이지 ID는 Atlassian MCP 연동 후 자동 탐색. 현재는 부모 페이지 ID만 등록.",
+    "last_updated": "2026-04-06"
+  },
+  "pages": {
+    "company_info": {
+      "id": "147095720",
+      "title": "회사 구성원 정보 및 자리배치도",
+      "url": "https://featuring-corp.atlassian.net/wiki/spaces/FC/pages/147095720/Company",
+      "note": "Figma 연동. 구성원 닉네임, 팀, 자리 정보 포함."
+    },
+    "culture_deck_root": {
+      "id": "306675721",
+      "title": "Culture Deck & 회사소개 & BM",
+      "url": "https://featuring-corp.atlassian.net/wiki/spaces/FC/pages/306675721/Culture+Deck",
+      "note": "하위 페이지 포함. 컬쳐덱 / 회사소개서 / 비즈니스 모델 설명 페이지가 자식 페이지로 구성됨.",
+      "children": {
+        "culture_deck": { "id": "TBD", "title": "컬쳐덱" },
+        "company_intro": { "id": "TBD", "title": "회사 소개서" },
+        "business_model": { "id": "TBD", "title": "비즈니스 모델" }
+      }
+    },
+    "customer_journey": {
+      "id": "TBD",
+      "title": "고객 여정 맵",
+      "note": "존재 여부 미확인. 확인 후 URL 추가 필요."
+    },
+    "product_guide": {
+      "id": "TBD",
+      "title": "피처링 플랫폼 체험 가이드",
+      "note": "개발팀(Earl) 협업 후 작성 예정. Step 6용."
+    }
+  },
+  "jira": {
+    "project_key": "TBD",
+    "note": "Jira 프로젝트 키 확인 후 추가. 현재 온보딩에서 직접 사용 안 함."
+  }
+}

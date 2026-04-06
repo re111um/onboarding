@@ -1,0 +1,88 @@
+{
+  "ceo": { "nickname": "Martin", "real_name": "장지훈", "role": "대표", "slack_id": "UKVLVHCR1" },
+  "hq_leads": {
+    "경영관리본부": {
+      "leader": { "nickname": "Elly", "real_name": "백승연", "role": "CFO", "slack_id": "U016XL5LJP7" },
+      "teams": {
+        "경영인프라팀": {
+          "leader": { "nickname": "Raine", "role": "팀 리드", "slack_id": "U09MS9BDQDP" }
+        }
+      }
+    },
+    "프로덕트본부": {
+      "leader": { "nickname": "Poza", "real_name": "최화섭", "role": "CTO", "slack_id": "UL8U6JJ23" },
+      "teams": {
+        "CDO스쿼드": {
+          "leader": { "nickname": "Ray", "role": "임시 담당", "slack_id": "U063X6KHFJB", "note": "TBD — 2분기 개편 예정" }
+        },
+        "콘텐츠관리스쿼드": {
+          "leader": { "nickname": "Tina", "role": "스쿼드 리드", "slack_id": "U063X6KDTUP" }
+        },
+        "엔진팀": {
+          "leader": { "nickname": "Earl", "role": "팀 리드", "slack_id": "U076KP5MLKB" }
+        },
+        "디자인팀": {
+          "leader": { "nickname": "Ray", "role": "팀 리드", "slack_id": "U063X6KHFJB" }
+        }
+      }
+    },
+    "세일즈&마케팅본부": {
+      "leader": { "nickname": "Martin", "real_name": "장지훈", "role": "대표 (본부장 겸)", "slack_id": "UKVLVHCR1" },
+      "teams": {
+        "마케팅팀": {
+          "leader": { "nickname": "Eve", "role": "팀 리드", "slack_id": "U08G9GNRG3T" }
+        },
+        "본부직속": {
+          "leader": { "nickname": "Eve", "role": "온보딩 담당", "slack_id": "U08G9GNRG3T", "note": "본부직속 인원 온보딩은 Eve가 담당" }
+        }
+      }
+    },
+    "인플루언서비즈니스본부": {
+      "leader": { "nickname": "Elly", "real_name": "백승연", "role": "CFO (본부장 겸)", "slack_id": "U016XL5LJP7" },
+      "teams": {
+        "캠페인팀": {
+          "leader": { "nickname": "Gina", "role": "팀 리드", "slack_id": "U05UTFLRL0P" }
+        },
+        "커머스팀": {
+          "leader": { "nickname": "Nana", "role": "팀 리드", "slack_id": "U07BR89840Z" }
+        }
+      }
+    }
+  },
+  "team_to_hq": {
+    "경영인프라팀": "경영관리본부",
+    "CDO스쿼드": "프로덕트본부",
+    "콘텐츠관리스쿼드": "프로덕트본부",
+    "엔진팀": "프로덕트본부",
+    "디자인팀": "프로덕트본부",
+    "마케팅팀": "세일즈&마케팅본부",
+    "세일즈&마케팅본부직속": "세일즈&마케팅본부",
+    "캠페인팀": "인플루언서비즈니스본부",
+    "커머스팀": "인플루언서비즈니스본부"
+  },
+  "onboarding_owners": {
+    "경영관리본부": { "contact": "Raine", "slack_id": "U09MS9BDQDP" },
+    "프로덕트본부_CDO스쿼드": { "contact": "Ray", "slack_id": "U063X6KHFJB", "note": "임시" },
+    "프로덕트본부_콘텐츠관리스쿼드": { "contact": "Tina", "slack_id": "U063X6KDTUP" },
+    "프로덕트본부_엔진팀": { "contact": "Earl", "slack_id": "U076KP5MLKB" },
+    "프로덕트본부_디자인팀": { "contact": "Ray", "slack_id": "U063X6KHFJB" },
+    "세일즈&마케팅본부": { "contact": "Eve", "slack_id": "U08G9GNRG3T", "note": "마케팅팀 + 본부직속 포함" },
+    "인플루언서비즈니스본부_캠페인팀": { "contact": "Gina", "slack_id": "U05UTFLRL0P" },
+    "인플루언서비즈니스본부_커머스팀": { "contact": "Nana", "slack_id": "U07BR89840Z" }
+  },
+  "step_domain_owners": {
+    "step2_product": { "hq": "프로덕트본부", "contact": "Poza", "slack_id": "UL8U6JJ23" },
+    "step3_biz": { "hq": "세일즈&마케팅본부", "contact": "Eve", "slack_id": "U08G9GNRG3T" },
+    "step6_platform": { "hq": "프로덕트본부", "contact": "Earl", "slack_id": "U076KP5MLKB", "note": "개발팀 협업 후 콘텐츠 확정" }
+  },
+  "hr": {
+    "nickname": "Thomas",
+    "role": "HR Manager",
+    "slack_id": "U099RMP705B"
+  },
+  "_meta": {
+    "org_version": "2025-Q1",
+    "note": "2분기 개편 예정. 본부 구조는 유지되며 일부 팀 변경 가능. 개편 확정 후 업데이트 필요.",
+    "last_updated": "2026-04-06"
+  }
+}
